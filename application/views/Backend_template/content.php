@@ -28,88 +28,52 @@
             <span class="btn btn-danger"></span>
         </div>
     </div><!-- /.sidebar-shortcuts -->
-    <?php
-    $uri = $this->uri->segment(2);
-//echo $uri;
-    ?>
     <ul class="nav nav-list">
-        <?php if (!$this->uri->segment(1)): ?>
-            <li class="active open hover">
-            <?php else: ?>
-            <li class="hover">
-            <?php endif; ?>    
+        <li class="<?php echo class_menu('') ?>">    
             <a href="<?php echo site_url(); ?>">
                 <i class="menu-icon fa fa-tachometer"></i>
                 <span class="menu-text"> Dashboard </span>
             </a>
             <b class="arrow"></b>
         </li>
-        <?php if ($this->uri->segment(1) == 'master'): ?>
-            <li class="active open hover">
-            <?php else: ?>
-            <li class="hover">
-            <?php endif; ?>  
+        <li class="<?php echo class_menu('master') ?>">
             <a href="<?php echo base_url('master'); ?>">
                 <i class="menu-icon fa fa-tachometer"></i>
                 <span class="menu-text"> Master System </span>
             </a>
             <b class="arrow"></b>
             <ul class="submenu">
-                <?php if ($this->uri->segment(2) == 'siswa'): ?>
-                    <li class="active open hover">
-                    <?php else: ?>
-                    <li class="hover">
-                    <?php endif; ?>  
+                <li class="<?php echo class_submenu_1('siswa') ?>"> 
                     <a href="<?php echo base_url('master/siswa'); ?>">
                         <i class="menu-icon fa fa-caret-right"></i>
                         Siswa
                     </a>
                 </li>
-                <?php if ($this->uri->segment(2) == 'guru'): ?>
-                    <li class="active open hover">
-                    <?php else: ?>
-                    <li class="hover">
-                    <?php endif; ?>  
+                <li class="<?php echo class_submenu_1('guru') ?>">
                     <a href="<?php echo base_url('master/guru'); ?>">
                         <i class="menu-icon fa fa-caret-right"></i>
                         Guru
                     </a>
                 </li>
-                <?php if ($this->uri->segment(2) == 'kelas'): ?>
-                    <li class="active open hover">
-                    <?php else: ?>
-                    <li class="hover">
-                    <?php endif; ?>  
+                <li class="<?php echo class_submenu_1('kelas') ?>">
                     <a href="<?php echo base_url('master/kelas'); ?>">
                         <i class="menu-icon fa fa-caret-right"></i>
                         Kelas
                     </a>
                 </li>
-                <?php if ($this->uri->segment(2) == 'jurusan'): ?>
-                    <li class="active open hover">
-                    <?php else: ?>
-                    <li class="hover">
-                    <?php endif; ?>  
+                <li class="<?php echo class_submenu_1('jurusan') ?>">
                     <a href="<?php echo base_url('master/jurusan'); ?>">
                         <i class="menu-icon fa fa-caret-right"></i>
                         Jurusan
                     </a>
                 </li>
-                <?php if ($this->uri->segment(2) == 'mata_pelajaran'): ?>
-                    <li class="active open hover">
-                    <?php else: ?>
-                    <li class="hover">
-                    <?php endif; ?>  
+                <li class="<?php echo class_submenu_1('mata_pelajaran') ?>">
                     <a href="<?php echo base_url('master/mata_pelajaran'); ?>">
                         <i class="menu-icon fa fa-caret-right"></i>
                         Mata Pelajaran
                     </a>
                 </li>
-                <?php if ($this->uri->segment(2) == 'tahun_pelajaran'): ?>
-                    <li class="active open hover">
-                    <?php else: ?>
-                    <li class="hover">
-                    <?php endif; ?>  
+                <li class="<?php echo class_submenu_1('tahun_pelajaran') ?>"> 
                     <a href="<?php echo base_url('master/tahun_pelajaran'); ?>">
                         <i class="menu-icon fa fa-caret-right"></i>
                         Tahun Pelajaran

@@ -83,7 +83,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url', 'file', 'form', 'gmf', 'js_plugins');
+$autoload['helper'] = array('url', 'file', 'form', 'gmf', 'js_plugins','template_ace');
 
 /*
 | -------------------------------------------------------------------
